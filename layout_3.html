@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-rows: 60px 100px 100px 100px;
+            grid-template-columns: 40% 30%;
+        }
+        .top{
+            background-color: yellow;
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-row-end: span 1;
+            grid-column-end: span 3;
+            padding: 10px;
+        }
+        .left{
+            background-color: red;
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-row-end: span 3;
+            grid-column-end: span 2;
+            padding: 10px;
+
+        }
+        .right1,.right2,.right3{
+            background-color: greenyellow;
+            padding: 10px;
+
+        }
+         @media only screen and (min-width:375px) and (max-width:769px){
+            .left{
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-row-end: span 3;
+            grid-column-end: span 3;
+            height: 300px;
+            }
+            .right1{
+            /* border:2px solid black; */
+            height: 200px;
+            }
+        }
+         @media only screen and (min-width:0px) and (max-width:376px){
+            .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .right1,.right2,.right3{
+            height: 100px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">Navigation</div>
+        <div class="left">LEFT BOX</div>
+        <div class="right1">RIGHT BOX1</div>
+        <div class="right2">RIGHT BOX2</div>
+        <div class="right3">RIGHT BOX3</div>
+    </div>
+</body>
+</html>
